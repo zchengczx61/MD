@@ -1,0 +1,12 @@
+parm 5p38_wat.prmtop
+trajin 5p38_md1.nc 1 10000
+center :1-347
+image familiar
+strip :WAT
+strip :Na+
+reference 5p38_wat.rst7
+rms :1-346@CA,C,N reference out 5p38_rmsd_p.dat
+rms :347&!@H= reference out 5p38_rmsd_l.dat
+radgyr :1-346@C,CA,N out 5p38_rg.dat mass nomax
+atomicfluct out 5p38_rmsf.dat :1-346@CA,C,N byres
+

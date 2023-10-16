@@ -1,0 +1,12 @@
+parm 5plk_wat.prmtop
+trajin 5plk_md1.nc 1 10000
+center :1-286
+image familiar
+strip :WAT
+strip :Cl-
+reference 5plk_wat.rst7
+rms :1-285@CA,C,N reference out 5plk_rmsd_p.dat
+rms :286&!@H= reference out 5plk_rmsd_l.dat
+radgyr :1-285@C,CA,N out 5plk_rg.dat mass nomax
+atomicfluct out 5plk_rmsf.dat :1-285@CA,C,N byres
+

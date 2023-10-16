@@ -1,0 +1,12 @@
+parm 10plk_wat.prmtop
+trajin 10plk_md1.nc 1 10000
+center :1-286
+image familiar
+strip :WAT
+strip :Cl-
+reference 10plk_wat.rst7
+rms :1-285@CA,C,N reference out 10plk_rmsd_p.dat
+rms :286&!@H= reference out 10plk_rmsd_l.dat
+radgyr :1-285@C,CA,N out 10plk_rg.dat mass nomax
+atomicfluct out 10plk_rmsf.dat :1-285@CA,C,N byres
+
