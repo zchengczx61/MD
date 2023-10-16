@@ -1,0 +1,12 @@
+Input for GB and PB
+&general
+   startframe=1000, endframe=9990, interval=10, 
+   keep_files=0, verbose=1,
+   strip_mask= :WAT:Cl-,
+/
+&gb
+  igb=2, saltcon=0.100,
+/
+&pb
+  inp=1, radiopt=0, istrng=0.100,
+/
